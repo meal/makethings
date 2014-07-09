@@ -9,11 +9,15 @@
 
 \customtitlepage{Hack Your House}
 
->Have you ever wanted to live in a house like the Jetsons? We will be taking the first step into this inevitable future in our workshop! You will learn to build a system that notifies you immediately of an unexpected environmental change such as gas in the air or a strange loud noise in your house. We will teach you to make your home smarter by using just an Arduino, some awesome analog and digital sensors, and a set of powerful web APIs.
+>Have you ever wanted to live in a house like the Jetsons? We will be taking the first step into this inevitable future in our workshop! You will learn to build a system that opens and closes door based on motion in front of it, just like in Star Trek.
 
 ### Authors
 
 __Jon Gottfried__ has been hacking on hardware since 2005, where he built competitive autonomous firefighting robots with PIC boards. Lately, he has been working on some home automation projects and phone-controlled robots that he is turning into tutorials for Twilio DIY Home Automation using Twilio and Twilio Robot as well as some Google Glass-controlled robots for fun. He loves hacking and loves teaching.
+
+__Wojtek Siudzinski__ is a software developer and DIY hacker for more than a decade. Currently connects everything to the internet (including his washing machine) with his open-home project. Wojtek writes his code in Python and Objective C. You had a chance to catch his Arduino workshop at Maker Meetup.
+
+__Mateusz Kozak__ is a ruby developer and hardware hacker at Enyuka Studio. He wants to make your home listen and speak to you like Iron Man’s J.A.R.V.I.S. During latest researches he started to fall in love with python.
 
 \newpage
 
@@ -21,7 +25,7 @@ __Jon Gottfried__ has been hacking on hardware since 2005, where he built compet
 
 ## Overview
 
-In this workshop you will learn how to build your own smart RFID-controlled deadbolt lock. We will be using an Arduino Uno, a servo, and a few sensors to modify a deadbolt lock so that you can control it via software and unlock it with an RFID tag. You will be able to mount our Arduino to your existing deadbolt without physically modifying or damaging it!
+In this workshop you will learn how to build your own motion controlled deadbolt lock. We will be using an Arduino Uno, a servo, a PIR motion sensor, and four 3D printed elements called Bitbeams.
 
 ## Preparations
 
@@ -92,44 +96,37 @@ Once you are comfortable with controlling your Servo, we can move on. Additional
 
 ### Step 6: Mounting to your lock
 
-Now that the software side of our project is done, we must mount the servo to our deadbolt lock. I prefer to use household items when prototyping these types of applications, though if you have access to a 3D printer I would recommend designing and printing your own lock mount.
+Now that the software side of our project is done, we must mount the servo to our deadbolt lock. To do this, we'll use 3D printed elements called Bitbeams which are open source alternatives to LEGO Technic blocks.
 
-For the purpose of prototyping, we will be using cardboard and duct tape to mount our servo to our lock - just like astronauts do!
-
-Attach the two metal rods to your servo with screws and washers.
+Firstly, screw one Bitbeam to the servo. Use 5th and 6th hole from left.
 
 \newpage
 
-![](content/workshops/home/image00.jpg)
+![](content/workshops/home/20140707_154536313_iOS.jpg)
 
-Now use a piece of cardboard (or other stiff material) to make a tighter bond between the servo and the lock:
+Then screw left vertical beam on its 3rd hole.
 
-![](content/workshops/home/image07.jpg)
+![](content/workshops/home/20140707_154715379_iOS.jpg)
 
-![](content/workshops/home/image10.jpg)
+Do the same with right vertical beam.
 
-Now you can tape the servo to the deadbolt lock. Make sure it is positioned on the correct side so that the direction that the servo turns in is aligned with the direction that the lock turns in:
+![](content/workshops/home/20140707_154749140_iOS.jpg)
+
+Now screw horizontal beam.
 
 \newpage
 
-![](content/workshops/home/image11.jpg)
+![](content/workshops/home/20140707_155008426_iOS.jpg)
 
-And last but not least, we will tape our servo’s arms to the deadbolt itself:
+Voila! You can try mounting the servo on deadbolt:
 
-![](content/workshops/home/image09.jpg)
+![](content/workshops/home/20140707_155106045_iOS.jpg)
 
-Now you have your fully mounted (and fully impermanent) servo-controlled deadbolt:
+If all fitts, tighten all screws so servo won't rotate.
 
-![](content/workshops/home/image06.jpg)
+### Step 7: Motion-Controlled Deadbolt
 
-
-## Second flow (optional)
-
-At this point, you have built an RFID-controlled deadbolt using your Arduino, a servo, and an RFID reader. But when it comes to home automation, there is always more to be done!
-
-### Experiment 1: Motion-Controlled Deadbolt
-
-This first experiment is the simplest (and most insecure) - we will unlock or lock our door every time we detect movement in front of it.
+We will unlock or lock our door every time we detect movement in front of it.
 
 Take the PIR motion sensor and wire it into your Arduino (VCC to +5V, GND to GND, and control to digital pin 2) - NOTE that the middle wire of the PIR sensor is GND, not the black wire. This is strange, but true. The red (+) wire is still VCC (the sensor should have a + and AL marking on it to distinguish this):
 
