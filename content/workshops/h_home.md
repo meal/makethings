@@ -13,8 +13,6 @@
 
 ### Authors
 
-__Jon Gottfried__ has been hacking on hardware since 2005, where he built competitive autonomous firefighting robots with PIC boards. Lately, he has been working on some home automation projects and phone-controlled robots that he is turning into tutorials for Twilio DIY Home Automation using Twilio and Twilio Robot as well as some Google Glass-controlled robots for fun. He loves hacking and loves teaching.
-
 __Wojtek Siudzinski__ is a software developer and DIY hacker for more than a decade. Currently connects everything to the internet (including his washing machine) with his open-home project. Wojtek writes his code in Python and Objective C. You had a chance to catch his Arduino workshop at Maker Meetup.
 
 __Mateusz Kozak__ is a ruby developer and hardware hacker at Enyuka Studio. He wants to make your home listen and speak to you like Iron Man’s J.A.R.V.I.S. During latest researches he started to fall in love with python.
