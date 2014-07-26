@@ -126,6 +126,45 @@ Take the PIR motion sensor and wire it into your Arduino (VCC to +5V, GND to GND
 
 You will need to use an internal pull-up to activate the motion sensor. This is done by setting digital pin 2 as an INPUT pin and then writing a HIGH value to it. Once you Arduino turns on, you need to wait a second or two for the PIR motion sensor to get a reading on a room without movement. Then you can start waving your arms all around!
 
+```
+#include <Servo.h>
+
+int pirPin = 7; //digital 7
+int servoPin = 11; //digital 11
+int lock = 0;
+int unlock = 180;
+
+Servo myservo;
+
+void setup(){
+  Serial.begin(9600);
+
+  pinMode(pirPin, INPUT);
+  digitalWrite(pirPin, HIGH); //internal pull-up to activate PIR
+
+  myservo.attach(servoPin);
+  myservo.write(lock);
+}
+
+
+void loop(){
+  int pirVal = digitalRead(pirPin);
+
+  if(pirVal == HIGH){ //was motion detected
+    Serial.println("Motion Detected");
+    if (myservo.read() >= 90) {
+      Serial.println("locking");
+      myservo.write(lock);
+    }
+    else {
+      Serial.println("unlocking");
+      myservo.write(unlock);
+    }
+    delay(3000); //pause to let the servo move
+  }
+}
+```
+
 When motion is detected, lock or unlock your deadbolt.
 
 You can find additional details on the sensor here: <https://www.sparkfun.com/products/8630>
