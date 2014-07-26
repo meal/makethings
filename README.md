@@ -1,13 +1,8 @@
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-
-\newpage
 
 ![](images/home.jpg)
 
-\customtitlepage{Hack Your House}
+## Hack Your House
 
 >Have you ever wanted to live in a house like the Jetsons? We will be taking the first step into this inevitable future in our workshop! You will learn to build a system that opens and closes door based on motion in front of it, just like in Star Trek.
 
@@ -19,7 +14,6 @@ __Wojtek Siudzinski__ is a software developer and DIY hacker for more than a dec
 
 __Mateusz Kozak__ is a ruby developer and hardware hacker at Enyuka Studio. He wants to make your home listen and speak to you like Iron Man’s J.A.R.V.I.S. During latest researches he started to fall in love with python.
 
-\newpage
 
 # Hack Your House
 
@@ -100,7 +94,6 @@ Now that the software side of our project is done, we must mount the servo to ou
 
 Firstly, screw one Bitbeam to the servo. Use 5th and 6th hole from left.
 
-\newpage
 
 ![](images/20140707_154536313_iOS.jpg)
 
@@ -114,7 +107,6 @@ Do the same with right vertical beam.
 
 Now screw horizontal beam.
 
-\newpage
 
 ![](images/20140707_155008426_iOS.jpg)
 
