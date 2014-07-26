@@ -94,7 +94,7 @@ After each modification, Upload your code to the Arduino again. You can view the
 
 Once you are comfortable with controlling your Servo, we can move on. Additional examples are available here: <http://arduino.cc/en/Tutorial/Sweep>
 
-### Step 6: Mounting to your lock
+### Step 3: Mounting to your lock
 
 Now that the software side of our project is done, we must mount the servo to our deadbolt lock. To do this, we'll use 3D printed elements called Bitbeams which are open source alternatives to LEGO Technic blocks.
 
@@ -124,7 +124,7 @@ Voila! You can try mounting the servo on deadbolt:
 
 If all fitts, tighten all screws so servo won't rotate.
 
-### Step 7: Motion-Controlled Deadbolt
+### Step 4: Motion-Controlled Deadbolt
 
 We will unlock or lock our door every time we detect movement in front of it.
 
